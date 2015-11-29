@@ -1,0 +1,12 @@
+{
+  "C:\\Program Files (x86)\\Java\\jre1.8.0_25\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files (x86)\\Java\\jre1.8.0_25\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "C:\\Users\\jonathan\\Desktop\\proximity-empty\\fr.ensisa.hassenforder.proximity.empty.common\\src": {
+    "location": "C:\\Users\\jonathan\\Desktop\\proximity-empty\\fr.ensisa.hassenforder.proximity.empty.common\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\jonathan\\Desktop\\proximity-empty\\fr.ensisa.hassenforder.proximity.empty.common\\src\u0027. Skipped."
+  }
+}
