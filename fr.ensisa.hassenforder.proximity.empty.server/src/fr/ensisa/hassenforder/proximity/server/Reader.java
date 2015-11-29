@@ -18,8 +18,6 @@ public class Reader extends BasicAbstractReader {
 		switch (type) {
 		case 0 :
 			break;
-		case 1: 
-			System.out.println("yo");
 		}
 	}
 	
