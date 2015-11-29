@@ -22,7 +22,6 @@ public class SessionServer {
 			Writer writer = new Writer (connection.getOutputStream());
 			Reader reader = new Reader (connection.getInputStream());
 			reader.receive ();
-			System.out.println("hassen");
 			switch (reader.getType ()) {
 			case 0 : return false; // socket closed
 			case 1 : break;
