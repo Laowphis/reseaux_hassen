@@ -41,6 +41,7 @@ public class Document {
     }
 
     public User doGetState(String name) {
+    	System.out.println("getState");
     	User user = users.get(name);
     	if (user == null) return null;
     	return user;
@@ -130,4 +131,5 @@ public class Document {
     	return true;
     }
 	
+
 }

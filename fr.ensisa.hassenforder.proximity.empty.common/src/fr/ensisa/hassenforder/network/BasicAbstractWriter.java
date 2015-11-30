@@ -5,6 +5,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import fr.ensisa.hassenforder.proximity.model.Preference;
+
 public class BasicAbstractWriter {
 
 	protected OutputStream outputStream;
@@ -47,7 +49,17 @@ public class BasicAbstractWriter {
 			e.printStackTrace();
 		}
 	}
-
+	/*
+	protected void writePref(Preference p) {
+		try {
+			output.writeUTF(p.getName());
+			output.writeInt(p.getLevel());
+			output.writeBoolean(p.isVisibility());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+*/
 	public void send() {
 		byte [] message = baos.toByteArray();
 		try {

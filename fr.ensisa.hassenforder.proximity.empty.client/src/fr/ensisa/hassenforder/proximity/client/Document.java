@@ -42,6 +42,7 @@ public class Document {
 	    	me = session.connect(name);
 	    	return true;
 		} catch (Exception e) {
+			System.out.println("exception Doc client");
 			socket = null;
 			session = null;
 			return false;

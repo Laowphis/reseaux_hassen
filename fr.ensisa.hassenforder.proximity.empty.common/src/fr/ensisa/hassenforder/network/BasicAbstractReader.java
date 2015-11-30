@@ -4,6 +4,8 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import fr.ensisa.hassenforder.proximity.model.Preference;
+
 public class BasicAbstractReader {
 
 	protected DataInputStream inputStream;
@@ -54,7 +56,18 @@ public class BasicAbstractReader {
 			return "";
 		}
 	}
-
+/*
+	protected Preference readPref(){
+		String refname=readString();
+		int reflvl=readInt();
+		Boolean refbool=readBoolean();
+		Preference p=null;
+		p.setName(refname);
+		p.setLevel(reflvl);
+		p.setVisibility(refbool);
+		return p;
+	}
+	*/
 	public int getType() {
 		return type;
 	}

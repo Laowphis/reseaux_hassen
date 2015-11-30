@@ -9,24 +9,34 @@ import fr.ensisa.hassenforder.proximity.model.Mode;
 import fr.ensisa.hassenforder.proximity.model.User;
 
 public class SessionClient {
-
+	
+	public String name;
 	private Socket connection;
+	public int usid;
+	public Document document;
+
 	
 	public SessionClient (Socket connection) {
 		this.connection = connection;
+		usid=0;
+		this.name=null;
 	}
 
-	public User connect (String name) {
-		try {
-			if (true) throw new IOException ("not yet implemented");
-			return null;
-		} catch (IOException e) {
-			return null;
-		}
+	public User connect (String name) throws IOException {
+		Writer wc = new Writer(connection.getOutputStream());
+		wc.wConnect(name);
+		wc.send();
+		Reader r= new Reader(connection.getInputStream());
+		r.receive();	
+		User usertmp = new User(name, r.userx, r.usery, r.userradius, r.modetemp);
+		
+		return usertmp;
 	}
-
+	
 	public void disconnect () {
+		System.out.println("disco");
 		connection = null;
+		this.name=null;
 	}
 
 	public User getState(String name) {
@@ -48,7 +58,7 @@ public class SessionClient {
 	}
 
 	public boolean changeMode (String name, Mode mode) {
-		try {
+		try {			
 			if (true) throw new IOException ("not yet implemented");
 			return false;
 		} catch (IOException e) {

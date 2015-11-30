@@ -17,6 +17,7 @@ public class User {
     private int radius;
     private Mode mode;
     private Map<String, Preference> preferences;
+    long ID;
 
     public User(String name, int x, int y, int radius, Mode mode) {
         this.name = name;
@@ -93,5 +94,9 @@ public class User {
 
 	public void addPreference(Preference p) {
 		getPreferences().put(p.getName(), p);
+	}
+
+	public long getId() {
+		return ID;
 	}
 }

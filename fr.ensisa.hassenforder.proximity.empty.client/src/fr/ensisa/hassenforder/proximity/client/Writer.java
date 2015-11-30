@@ -6,13 +6,14 @@ import fr.ensisa.hassenforder.network.BasicAbstractWriter;
 import fr.ensisa.hassenforder.network.Protocol;
 import fr.ensisa.hassenforder.proximity.model.Mode;
 
-public class Writer extends BasicAbstractWriter {
+public class Writer extends BasicAbstractWriter implements Protocol{
 
 	public Writer(OutputStream outputStream) {
 		super (outputStream);
 	}
 
-	public void connect(){
-		this.writeInt(1);
+	public void wConnect(String name){
+		this.writeInt(CONNECTION);
+		this.writeString(name);
 	}
 }
